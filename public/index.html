@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1ee0183f8e.js" crossorigin="anonymous"></script>
+    <title>Openboard_Clone</title>
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fa-solid fa-bars"></i>
+        <!-- <i class="fas fa-times"></i> -->
+    </div>
+    <div class="tools-cont scale-tools">
+        <img class="pencil" src="img/3094216.png" alt="">
+        <img class="eraser" src="img/2661282.png" alt="">
+        <img class="download" src="img/814848.png" alt="">
+        <img class="upload" src="img/5124798.png" alt="">
+        <img class= "sticky" src="img/9299431.png" alt="">
+        <img class="redo" src="img/889578.png" alt="">
+        <img class="undo" src="img/889590.png" alt="">
+    </div>
+
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencil-width">
+        </div>
+        <div class="pencil-color-cont">
+            <div class=" black pencil-color"></div>
+            <div class=" red pencil-color"></div>
+            <div class=" blue pencil-color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont">
+        <input type="range" min="2" max="10" value="3" class="eraser-width">
+    </div>
+     
+    <!-- <div class="sticky-cont">
+        <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <textarea></textarea>
+        </div>
+    </div> -->
+
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+    <script>
+        // connecting frontend to backend
+        let socket = io.connect("http://localhost:3000");
+    </script>
+    <script src="tools.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>
